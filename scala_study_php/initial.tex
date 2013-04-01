@@ -1,0 +1,215 @@
+\documentclass[dvipdfm,cjk,14pt,hyperref={bookmarks=false,compress,slidestop}]{beamer}
+\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}}
+\renewcommand{\kanjifamilydefault}{\mgdefault}
+\renewcommand{\baselinestretch}{1.4}
+\usefonttheme{professionalfonts}
+\usetheme{GrayGradient}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[sc]{mathpazo}
+\usepackage[scaled]{helvet}
+\usepackage[scaled]{beramono}
+\usepackage[deluxe,expert]{otf}
+\usepackage{textcomp,okumacro}
+\usepackage{url}
+\graphicspath{{../images/}}
+\author{金子達哉 \texttt{(id:catatsuy)}}
+\title{Scala 初心者が Scala を勉強しようとして}
+\date{}
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\begin{frame}
+ \frametitle{自己紹介}
+ \begin{itemize}
+  \item 金子達哉
+  \item はてな ID: \texttt{catatsuy}
+  \item twitter: \texttt{catatsuy}
+ \end{itemize}
+
+\begin{picture}(0,0)(0,0)
+ \put(200,0){\includegraphics[clip, height=35truemm]{catatsuy}}
+\end{picture}
+ \vspace{-5pt}
+ URL:
+ \begin{itemize}
+  \item \url{http://www.catatsuy.org}
+  \item \url{http://blog.catatsuy.org}
+  \item \url{https://matw.co}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{所属}
+ \begin{itemize}
+  \item 東京工業大学
+  \item 情報工学科 4 年（9 月卒業予定）
+  \item 吉瀬研究室\\
+        \begin{itemize}
+         \item コンピュータアーキテクチャ
+        \end{itemize}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{就職活動}
+ \begin{itemize}
+  \item はてなインターン 2012
+  \item pixiv インターン
+ \end{itemize}
+ \vspace{-20pt}
+ \begin{center}
+  \begin{tabular}{cc}
+   \includegraphics[clip, height=38truemm]{pixiv} & \includegraphics[clip, height=38truemm]{hatena} \\ 
+  \end{tabular}
+ \end{center}
+\end{frame}
+
+\begin{frame}[plain]
+ \begin{center}
+  \LARGE
+  \includegraphics[clip, height=58truemm]{pixivall}\\
+  \bfseries\gtfamily 10 月から \includegraphics[clip,
+  height=25pt]{pixiv_logo} \hspace{2pt}  へ！
+ \end{center}
+\end{frame}
+
+\begin{frame}[plain]
+ \begin{center}
+  \Huge
+  \textbf{WARNING}
+ \end{center}
+\end{frame}
+
+\begin{frame}[plain]
+ \begin{center}
+  \LARGE
+  このプレゼンはゆるふわです\\
+  コードは一行も出てきません\\
+  リラックスして聞きましょう
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{何でいるの？}
+ \begin{picture}(0,0)(0,0)
+  \put(0,5){\includegraphics[clip,
+  height=30truemm]{tweet_288671004547502080.png}}
+  \put(150,-35){\includegraphics[clip,
+  height=30truemm]{tweet_296299794069061633.png}}
+  \put(0,-95){\includegraphics[clip,
+  height=30truemm]{tweet_296299960557793280.png}}
+ \end{picture}
+\end{frame}
+
+\begin{frame}
+ \frametitle{お手柔らかにお願いします}
+ \begin{picture}(0,0)(0,0)
+  \put(40,-60){\includegraphics[clip,
+  width=90truemm]{tweet_296301154684514304.png}}
+ \end{picture}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Scala に興味を持った理由}
+ \begin{itemize}
+  \item 関数型言語
+  \item 型推論
+  \item オブジェクト指向
+  \item シンプルな記述
+  \item JVM の上で動く
+ \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]
+ \begin{itemize}
+  \item 普段使っている言語を部分的に関数型言語みたいに使えないのか
+  \item それができれば無理して使う必要はない？
+ \end{itemize}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+ \frametitle{最高にやばい言語 PHP}
+\small
+ \begin{verbatim}
+array array_map (callable $callback, array $arr1)
+bool array_walk (array &$array, callable $funcname)
+array array_filter (array $input, callable $callback)
+ \end{verbatim}
+
+\begin{center}
+\Large
+ 嘘みたいだろ？ 同じ言語なんだぜ\\
+これで…
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+ \frametitle{PHP の問題点}
+ \begin{itemize}
+  \item PHP5.3 から無名関数が使えるように！
+  \item 組込み関数の使い勝手最悪で使う気にならない
+  \item \texttt{0 == 'hoge'} 問題が発生する
+  \item 基本的な部分でも結構はまる
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{コップ本を購入しました！}
+ \begin{picture}(0,0)(0,0)
+  \put(160,-75){\includegraphics[clip,
+  width=55truemm]{scala_cop_book.jpg}}
+ \end{picture}
+ Scalaスケーラブル\\ プログラミング第2版
+\end{frame}
+
+\begin{frame}[plain]
+ \begin{center}
+  \LARGE よくわからない…
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{分からない理由}
+ \begin{itemize}
+  \item 関数型・オブジェクト指向型・手続き型への理解が浅い
+  \item 用語・メリットが分からない
+  \item 関数型の勉強をしたいがこれでは勉強にならない
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{すごい H 本}
+ \begin{picture}(0,0)(0,0)
+  \put(180,-75){\includegraphics[clip,
+  width=55truemm]{sugoi_h.jpg}}
+ \end{picture}
+ \noindent 関数型言語の勉強のために\\ すごい H 本を購入
+\end{frame}
+
+\begin{frame}
+ \frametitle{すごい H 本で}
+ \begin{itemize}
+  \item 関数型言語の用語や威力など勉強できる
+  \item 関数型言語の経験が浅い人はコップ本読んでも意味ない
+  \item まずはすごい H 本！
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{まとめ}
+ \begin{itemize}
+  \item まずすごい H 本読みましょう
+  \item 電子書籍あります
+  \item そのあとコップ本読みましょう
+  \item Scala 勉強します
+ \end{itemize}
+\end{frame}
+
+
+\end{document}
