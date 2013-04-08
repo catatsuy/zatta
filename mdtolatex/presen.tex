@@ -26,6 +26,7 @@ URL:
 * 情報工学科 4 年（9 月卒業予定）
 * 吉瀬研究室
     * コンピュータアーキテクチャ
+    * `C++` でハードウェアのシミュレーションを高速化する研究しています（詳しくは長くなるので省略）
 
 ## 就職活動
 
@@ -89,6 +90,8 @@ URL:
 
 * \verb+\verb/gcc/+ とか書くの面倒
 * \verb+\begin{} - \end{}+ で囲うの面倒
+* 最初のプリアンブルがうざい
+
 
 ## 時代は軽量マークアップへ
 
@@ -162,6 +165,19 @@ URL:
 * 本当は \verb/\verb+...+/ とかにして欲しい
 * テンプレートが日本の \LaTeX 向けではない
 
+
+## Github で Fork しました！
+
+\small
+
+    git clone git://github.com/catatsuy/pandoc.git
+    cd pandoc
+    git submodule init
+    git submodule update
+    # git://github.com/catatsuy/pandoc-templates.git
+    # が data/templates 以下に clone される
+
+
 ## ` ` の挙動を変える
 
 \small
@@ -182,10 +198,6 @@ URL:
 * \$ ...\$ で変数展開
     * 変数は `-V` オプションで渡す
 
-\small
-
-    git submodule init
-    git submodule update
 
 ## テンプレート作成ポイント
 
@@ -244,16 +256,20 @@ URL:
 
 ## サンプル
 
+今回の一連の流れを再現するサンプル
+
 \begin{center}
-今回の一連の流れを再現するソースコード
-
-\verb+github.com/catatsuy/pandoc+  
-\verb+github.com/catatsuy/pandoc-templates+  
 \verb+github.com/catatsuy/mdtolatex_sample+
-
- で公開しています
-
 \end{center}
+
+`Makefile` など参考にしてください
+
+
+## 今後の予定
+
+* 卒論を Markdown で書きます
+* その上で分かった問題を共有していきます
+* Markdown で卒論書きましょう
 
 
 ## まとめ
