@@ -22,11 +22,13 @@ URL:
 
 ## 所属
 
-* 東京工業大学
+* 東京工業大学（≠電通大）
 * 情報工学科 4 年（9 月卒業予定）
 * 吉瀬研究室
     * コンピュータアーキテクチャ
-    * `C++` でハードウェアのシミュレーションを高速化する研究しています（詳しくは長くなるので省略）
+\if0
+    * `C++` でハードウェアのシミュレーションをする DSL を提供するライブラリを高速化する研究をしています（詳しくは略）
+\fi
 
 ## 就職活動
 
@@ -77,6 +79,12 @@ URL:
  （8 月提出のため）\\
  絶賛追い込みなう☆
 \end{center}
+
+## 突然の死刑宣告
+
+\begin{picture}(0,0)(0,0)
+ \put(30,-70){\includegraphics[clip, width=100truemm]{tweet.png}}
+\end{picture}
 
 ## 卒論といえば…
 
@@ -153,18 +161,17 @@ URL:
     # 本文のみ
     pandoc input.md -o output.tex
     # テンプレート込み
-    pandoc input.md -s -o output.tex
+    pandoc -s input.md -o output.tex
     # beamer（プレゼン）出力
-    pandoc -t beamer input.md -o output.texw
+    pandoc -t beamer input.md -o output.tex
     # 変数指定
     pandoc -V fontsize=12Q input.md -o output.tex
 
 ## pandoc の問題点
 
-* \verb/`gcc`/ と書くと \verb/\texttt{...}/ にされてしまう
-* 本当は \verb/\verb+...+/ とかにして欲しい
+* \verb/`gcc`/ と書くと \verb/\texttt{gcc}/ にされてしまう
+* 本当は \verb/\verb+gcc+/ とかにして欲しい
 * テンプレートが日本の \LaTeX 向けではない
-
 
 ## Github で Fork しました！
 
@@ -214,8 +221,9 @@ URL:
 \small
 
     cabal install cabal-dev
+    cd pandoc
     cabal-dev install --sandbox=.
-    # ./bin/ 以下に実行ファイルが出力される
+    # pandoc/bin/ 以下に実行ファイルが出力される
 
 
 ## 使ってみて分かった問題点
@@ -250,8 +258,15 @@ URL:
 ## 欠点
 
 * 出力を意識しながら書く必要
-* \verb+\\+ が書けないので \verb+\linebreak+ や \verb+\newline+ などを使う必要
-* \LaTeX を純粋に書くなら生じない無駄な悩みが発生することも
+* \LaTeX の書き方にも工夫が必要
+* \LaTeX を純粋に書くなら生じない無駄な悩みが発生
+
+## 必要な工夫
+
+* \verb+\\+ が書けない
+    * \verb+\linebreak+ や \verb+\newline+ などを使う必要
+* コメントアウトが \% でできない
+    * `comment.sty` か \verb/\if0 \fi/ を使う
 
 
 ## サンプル
