@@ -5,8 +5,8 @@
 ## 自己紹介
 
 * 金子達哉
-* はてな ID: catatsuy
-* twitter: catatsuy
+* はてな ID: \texttt{catatsuy}
+* twitter: \texttt{catatsuy}
 
 \begin{picture}(0,0)(0,0)
   \put(200,0){\includegraphics[clip, height=35truemm]{catatsuy}}
@@ -26,9 +26,7 @@ URL:
 * 情報工学科 4 年（9 月卒業予定）
 * 吉瀬研究室
     * コンピュータアーキテクチャ
-\if0
-    * `C++` でハードウェアのシミュレーションをする DSL を提供するライブラリを高速化する研究をしています（詳しくは略）
-\fi
+    * `C++11` 上でハードウェア記述のシミュレーションをする DSL を提供するライブラリを高速化する研究をしています（長くなるので略）
 
 ## 就職活動
 
@@ -154,7 +152,7 @@ URL:
     # ~/.cabal/bin/ ディレクトリ以下に PATH を通す
 
 
-## pandoc の使い方
+## Pandoc の使い方
 
 \small
 
@@ -167,7 +165,7 @@ URL:
     # 変数指定
     pandoc -V fontsize=12Q input.md -o output.tex
 
-## pandoc の問題点
+## Pandoc の問題点
 
 * \verb/`gcc`/ と書くと \verb/\texttt{gcc}/ にされてしまう
 * 本当は \verb/\verb+gcc+/ とかにして欲しい
@@ -202,6 +200,7 @@ URL:
 ## テンプレート
 
 * 別リポジトリ（`git submodule`）
+* `data/templates` 以下の `default.latex`
 * \$ ...\$ で変数展開
     * 変数は `-V` オプションで渡す
 
@@ -286,7 +285,7 @@ URL:
 * その上で分かった問題を共有していきます
 * Markdown で卒論書きましょう
 
-
+\if0
 ## まとめ
 
 \vspace{-25pt}
@@ -296,3 +295,4 @@ URL:
  I $\heartsuit$ Markdown \linebreak
  I $\heartsuit$ 卒論
 \end{center}
+\fi
