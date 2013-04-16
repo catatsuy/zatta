@@ -1,0 +1,36 @@
+\documentclass{jsarticle}
+\AtBeginDvi{\special{papersize=91truemm,55truemm}} %dviウェアにサイズを伝える
+\usepackage{calc}
+\usepackage[dvipdfm]{graphicx,pict2e}
+\usepackage[dvipdfm,dvipsnames]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[sc]{mathpazo}
+\usepackage[scaled]{beramono}
+\usepackage[scaled=.8]{helvet}
+\usepackage[deluxe,expert]{otf}
+\usepackage{okumacro,mediabb}
+\graphicspath{{img/}}
+\pagestyle{empty}
+% マージン調整
+\setlength{\hoffset}{0in}
+\setlength{\voffset}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-1truein}
+\setlength{\topmargin}{-1truein}
+\begin{document}
+\kanjifamily{gt}                %ゴシックにする
+\setlength{\unitlength}{1truemm} %picture環境の単位が1mmになる
+    \begin{picture}(91,55)(0,0)
+     \put(22,24){\huge \kintou{5.5zw}{\bfseries\gtfamily 金子\hspace{1zw}達哉}}
+     \put(22,32){{\gtfamily 工学部 情報工学科}}
+     \put(22,18){\gtfamily \textcolor{SkyBlue}{国立大学法人} \textcolor{Blue}{\bfseries 東京工業大学}}
+     \put(22,18){\small{\gtfamily }}
+     \put(22,14.5){\small{\ttfamily \resizebox{!}{6.5pt}{〒}152-8552 \resizebox{!}{6.5pt}{東京都目黒区大岡山}\hspace{1pt}2-12-1-W8-79}}
+     \put(22,11){\small{\ttfamily TEL: 03-5734-3699}}
+     \put(22,7.5){\small{\ttfamily E-mail:\ kaneko@arch.cs.titech.ac.jp}}
+     \put(22,4){\small{\ttfamily http://www.arch.cs.titech.ac.jp/}} % twitter
+     \put(-3.5,36){\includegraphics[clip, height=20truemm]{scardx}}
+    \end{picture}
+\end{document}

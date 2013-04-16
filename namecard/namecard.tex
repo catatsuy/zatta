@@ -1,0 +1,51 @@
+\documentclass{jsarticle}
+\AtBeginDvi{\special{papersize=91truemm,55truemm}} %dviウェアにサイズを伝える
+\usepackage{calc}
+\usepackage[dvipdfm]{graphicx,pict2e}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[sc]{mathpazo}
+\usepackage[scaled=.8]{beramono}
+\usepackage[scaled=.8]{helvet}
+\usepackage[deluxe,expert]{otf}
+\usepackage{okumacro,mediabb}
+\graphicspath{{img/}}
+\pagestyle{empty}
+% マージン調整
+\setlength{\hoffset}{0in}
+\setlength{\voffset}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-1truein}
+\setlength{\topmargin}{-1truein}
+\begin{document}
+\kanjifamily{gt}                %ゴシックにする
+\setlength{\unitlength}{1truemm}
+    \begin{picture}(91,55)(0,0)
+     \put(36,33){\huge \kintou{2.5zw}{\ruby{\bfseries\gtfamily 金}{\gt カ
+     ネ}\ruby{\bfseries\gtfamily 子}{\gt
+     コ}}\hspace{1zw}\kintou{2.5zw}{\ruby{\bfseries\gtfamily 達}{\gt タ
+     ツ}\ruby{\bfseries\gtfamily 哉}{\gt ヤ}}} %氏名 91truemm/2-3zw 1zw=3truemm huge=20.74
+     \put(36,27){{\small\gtfamily 東京工業大学 工学部 情報工学科}}
+     \put(36,22){\includegraphics[clip,width=2.7truemm]{gmail.pdf}}
+     \put(40.5,22){\small{\ttfamily m.ddotx.f@gmail.com}} % e-mail
+     \put(35.8,17.5){\includegraphics[clip,width=3.2truemm]{wordpress-logo-notext-cmyk.pdf}}
+     \put(40.5,18){\small{\ttfamily blog.catatsuy.org}} % web
+     \put(40.5,14){\small{\ttfamily https://matw.co}} % web
+     \put(53,9.5){\small{\ttfamily catatsuy}}
+     \put(36,9){\includegraphics[clip,width=3truemm]{twitter-bird-light-bgs.pdf}}
+     \put(40,9){\includegraphics[clip,width=3truemm]{hatena_logo_square.pdf}}
+     \put(44,9){\includegraphics[clip,width=3truemm]{octocat.pdf}}
+     \put(48.1,9){\includegraphics[clip, width=2.7truemm]{f_logo.pdf}}
+     % \put(36,9.5){\includegraphics[clip,width=3truemm]{twitter-bird-light-bgs.pdf}}
+     % \put(40.5,10){\small{\ttfamily catatsuy}} % twitter
+     % \put(56.5,9.5){\includegraphics[clip, width=3truemm]{hatena_logo_square.pdf}}
+     % \put(61,10){\small{\ttfamily catatsuy}} % はてな
+     % \put(36,5.5){\includegraphics[clip,width=3truemm]{octocat.pdf}}
+     % \put(40.5,6){\small{\ttfamily catatsuy}} % github
+     % \put(56.6,5.5){\includegraphics[clip, width=2.7truemm]{f_logo.pdf}}
+     % \put(61,6){\small{\ttfamily catatsuy}} % fb
+     \put(5,5){\includegraphics[clip, width=45truemm]{r.pdf}}
+     % \put(-3.5,36){\includegraphics[clip, height=20truemm]{scardx}}
+    \end{picture}
+\end{document}

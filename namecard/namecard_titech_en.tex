@@ -1,0 +1,39 @@
+\documentclass{jsarticle}
+\AtBeginDvi{\special{papersize=91truemm,55truemm}} %dviウェアにサイズを伝える
+\usepackage{calc}
+\usepackage[dvipdfm]{graphicx,pict2e}
+\usepackage[dvipdfm,dvipsnames]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[sc]{mathpazo}
+\usepackage[scaled]{beramono}
+\usepackage[scaled=.8]{helvet}
+\usepackage[deluxe,expert]{otf}
+\usepackage{okumacro,mediabb}
+\graphicspath{{img/}}
+\pagestyle{empty}
+% マージン調整
+\setlength{\hoffset}{0in}
+\setlength{\voffset}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-1truein}
+\setlength{\topmargin}{-1truein}
+\begin{document}
+\kanjifamily{gt}                %ゴシックにする
+\setlength{\unitlength}{1truemm} %picture環境の単位が1mmになる
+    \begin{picture}(91,55)(0,0)
+     \put(22,33){\small\sffamily Department of Computer
+     Science}
+     \put(22,30){\small\sffamily School Of Engineering}
+     \put(22,24){\huge {\bfseries\sffamily Tatsuya KANEKO}}
+     \put(22,20){\sffamily \textcolor{SkyBlue}{\textbf{TOKYO INSTITUTE OF TECHNOLOGY}}}
+     \put(22,16.5){\small{\ttfamily 2-12-1-W8-79 Ookayama, Meguro-ku,}}
+     \put(22,13.5){\small{\ttfamily Tokyo 152-8552, Japan}}
+     \put(22,10.5){\small{\ttfamily TEL: +81-3-5734-3699}}
+     \put(22,7.5){\small{\ttfamily E-mail:\ kaneko@arch.cs.titech.ac.jp}}
+     \put(22,4.5){\small{\ttfamily http://www.arch.cs.titech.ac.jp/}} % twitter
+     \put(-3.5,36){\includegraphics[clip, height=20truemm]{scardx}}
+    \end{picture}
+\end{document}
+% Department of Computer Science School Of Engineering
